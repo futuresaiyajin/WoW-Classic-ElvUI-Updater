@@ -1,9 +1,9 @@
 SET MYFILE=elvui.zip
 SET WOW_CLASSIC_INSTALL_DIR=C:\Program Files\World of Warcraft\_classic_
  
-IF EXIST %MYFILE% del /f %MYFILE%
+IF EXIST %USERPROFILE%\Downloads\%MYFILE% del /f %USERPROFILE%\Downloads\%MYFILE%
 
-curl https://www.tukui.org/classic-addons.php?download=2 -o %MYFILE%
+curl https://www.tukui.org/classic-addons.php?download=2 -o %USERPROFILE%\Downloads\%MYFILE%
 
 for %%a in ("%WOW_CLASSIC_INSTALL_DIR%\Interface\AddOns\ElvUI" "%WOW_CLASSIC_INSTALL_DIR%\Interface\AddOns\ElvUI_OptionsUI") do rd /s /q "%%~a"
 
